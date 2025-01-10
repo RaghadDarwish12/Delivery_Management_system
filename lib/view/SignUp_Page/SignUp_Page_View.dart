@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_project/Colors/ColorsApp.dart';
+import 'package:flutter_project/constant/Colors/ColorsApp.dart';
 import 'package:flutter_project/view/Home_Page/Home_Page_View.dart';
 import 'package:flutter_project/view/Login_Page/Login_Page_View.dart';
 
 class SignupPageView extends StatelessWidget {
-  const SignupPageView({super.key});
+   SignupPageView({super.key});
+
+   final TextEditingController _firstNameController = TextEditingController();
+   final TextEditingController _lastNameController = TextEditingController();
+   final TextEditingController _emailController = TextEditingController();
+   final TextEditingController _passwordController = TextEditingController();
+   final TextEditingController _confirmPasswordController = TextEditingController();
+   bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +27,7 @@ class SignupPageView extends StatelessWidget {
                   gradient: LinearGradient(
                       colors: [
                         Colors.white,
-                        primaryColor,
+                        AppColor.primaryColor,
                         Colors.black87
                       ],
                       begin: Alignment.topLeft,
@@ -89,13 +96,13 @@ class SignupPageView extends StatelessWidget {
                                   label: Text(
                                     'First Name',
                                     style: TextStyle(
-                                      color: primaryColor.withOpacity(0.7),
+                                      color: AppColor.primaryColor.withOpacity(0.7),
                                       fontWeight: FontWeight.bold,
 
                                     ),
                                   ),
 
-                                  focusColor: primaryColor
+                                  focusColor: AppColor.primaryColor
                               ),
                             ),
 
@@ -114,13 +121,13 @@ class SignupPageView extends StatelessWidget {
                                   label: Text(
                                     'Last Name',
                                     style: TextStyle(
-                                      color: primaryColor.withOpacity(0.7),
+                                      color: AppColor.primaryColor.withOpacity(0.7),
                                       fontWeight: FontWeight.bold,
 
                                     ),
                                   ),
 
-                                  focusColor: primaryColor
+                                  focusColor: AppColor.primaryColor
                               ),
                             ),
 
@@ -142,13 +149,13 @@ class SignupPageView extends StatelessWidget {
                                   label: Text(
                                     'Email',
                                     style: TextStyle(
-                                      color: primaryColor.withOpacity(0.7),
+                                      color: AppColor.primaryColor.withOpacity(0.7),
                                       fontWeight: FontWeight.bold,
 
                                     ),
                                   ),
 
-                                  focusColor: primaryColor
+                                  focusColor: AppColor.primaryColor
                               ),
                             ),
 
@@ -170,7 +177,7 @@ class SignupPageView extends StatelessWidget {
                                 label: Text(
                                   'Password',
                                   style: TextStyle(
-                                    color: primaryColor.withOpacity(0.7),
+                                    color: AppColor.primaryColor.withOpacity(0.7),
                                     fontWeight: FontWeight.bold,
 
                                   ),
@@ -196,8 +203,8 @@ class SignupPageView extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       gradient: LinearGradient(
                                           colors: [
-                                            primaryColor,
-                                            primaryColor.withOpacity(0.9),
+                                            AppColor.primaryColor,
+                                            AppColor.primaryColor.withOpacity(0.9),
                                             Colors.white
                                           ],
                                           begin: Alignment.topLeft,
@@ -210,7 +217,7 @@ class SignupPageView extends StatelessWidget {
                                         BoxShadow(
                                           blurRadius: 10,
                                           offset: Offset(0, 15),
-                                          color: primaryColor.withOpacity(0.4),
+                                          color: AppColor.primaryColor.withOpacity(0.4),
                                         )
                                       ]
                                   ),
@@ -263,7 +270,7 @@ class SignupPageView extends StatelessWidget {
                                     , child: Text(
                                   'LogIn',
                                   style: TextStyle(
-                                    color: primaryColor,
+                                    color: AppColor.primaryColor,
                                     fontSize: 20,
 
                                   ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project/view/Landing_Pages/First_Landing_View.dart';
 import 'package:flutter_project/view/Landing_Pages/Second_Landing_View.dart';
 import 'package:flutter_project/view/Home_Page/Home_Page_View.dart';
-import 'package:flutter_project/Colors/ColorsApp.dart';
+import 'package:flutter_project/constant/Colors/ColorsApp.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
@@ -55,7 +55,7 @@ class Landing_Pages_View extends StatelessWidget {
                   dotHeight: 12 ,
                   dotWidth: 12,
                   dotColor: Colors.white,
-                  activeDotColor: primaryColor
+                  activeDotColor: AppColor.primaryColor
                 ),
               ),
             ),
@@ -86,14 +86,14 @@ class Landing_Pages_View extends StatelessWidget {
                     height: 70,
                     width: 170,
                     decoration: BoxDecoration(
-                        color: primaryColor,
+                        color: AppColor.primaryColor,
                         borderRadius: BorderRadius.circular(50),
 
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 10,
                             offset: Offset(0, 15),
-                            color: primaryColor.withOpacity(0.4),
+                            color: AppColor.primaryColor.withOpacity(0.4),
                           )
                         ]
                     ),

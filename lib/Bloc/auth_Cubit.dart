@@ -22,11 +22,13 @@ class AuthCubit extends Cubit<AuthState> {
       );
 
       if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
         emit(AuthState(isSuccess: true));
         return true;
+
       } else {
-        final error = json.decode(response.body)['message'];
-        emit(AuthState(errorMessage: error));
+        final error = json.decode(response.body);
+        emit(AuthState(errorMessage: error['message'] ?? 'Invalid credentials'));
         return false;
       }
     } catch (e) {

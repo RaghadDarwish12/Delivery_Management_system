@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_project/Colors/ColorsApp.dart';
+import 'package:flutter_project/constant/Colors/ColorsApp.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({super.key});
@@ -27,7 +27,7 @@ class HomePageView extends StatelessWidget {
               child: Icon(
                 weight: 13,
                 Icons.grid_view_rounded,
-                color: primaryColor,
+                color: AppColor.primaryColor,
                 size: 40,
               ),
             ),

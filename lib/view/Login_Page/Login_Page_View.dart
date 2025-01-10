@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_project/Colors/ColorsApp.dart';
+import 'package:flutter_project/constant/Colors/ColorsApp.dart';
 import 'package:flutter_project/view/Home_Page/Home_Page_View.dart';
 import 'package:flutter_project/view/SignUp_Page/SignUp_Page_View.dart';
 import '../../Bloc/auth_Cubit.dart';
@@ -59,8 +59,10 @@ class LoginPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return BlocProvider(
       create: (context) => AuthCubit(),
+
       child: Scaffold(
         body: SingleChildScrollView(
           child: Stack(
@@ -72,7 +74,7 @@ class LoginPageView extends StatelessWidget {
                          gradient: LinearGradient(
                             colors: [
                               Colors.white,
-                              primaryColor,
+                              AppColor.primaryColor,
                               Colors.black87
                             ],
                           begin: Alignment.topLeft,
@@ -142,12 +144,12 @@ class LoginPageView extends StatelessWidget {
                                           Text(
                                             'Email',
                                             style: TextStyle(
-                                              color: primaryColor.withOpacity(0.7),
+                                              color: AppColor.primaryColor.withOpacity(0.7),
                                               fontWeight: FontWeight.bold,
 
                                             ),
                                           ),
-                                          focusColor: primaryColor
+                                          focusColor: AppColor.primaryColor
                                         ),
                                         validator: (value) {
 
@@ -183,7 +185,7 @@ class LoginPageView extends StatelessWidget {
                                           label: Text(
                                             'Password',
                                             style: TextStyle(
-                                              color: primaryColor.withOpacity(0.7),
+                                              color: AppColor.primaryColor.withOpacity(0.7),
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -233,8 +235,8 @@ class LoginPageView extends StatelessWidget {
                                             decoration: BoxDecoration(
                                                 gradient: LinearGradient(
                                                     colors: [
-                                                      primaryColor,
-                                                      primaryColor.withOpacity(0.9),
+                                                      AppColor.primaryColor,
+                                                      AppColor.primaryColor.withOpacity(0.9),
                                                       Colors.white
                                                     ],
                                                     begin: Alignment.topLeft,
@@ -247,7 +249,7 @@ class LoginPageView extends StatelessWidget {
                                                   BoxShadow(
                                                     blurRadius: 10,
                                                     offset: Offset(0, 15),
-                                                    color: primaryColor.withOpacity(0.4),
+                                                    color: AppColor.primaryColor.withOpacity(0.4),
                                                   )
                                                 ]
                                             ),
@@ -296,7 +298,7 @@ class LoginPageView extends StatelessWidget {
                                               , child: Text(
                                             'Sign Up',
                                             style: TextStyle(
-                                              color: primaryColor,
+                                              color: AppColor.primaryColor,
                                               fontSize: 20,
 
                                             ),

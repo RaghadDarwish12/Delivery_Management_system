@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_project/view/Product_Details_Page/Product_Details_View_Page.dart';
-import 'package:flutter_project/Colors/ColorsApp.dart';
+import 'package:flutter_project/constant/Colors/ColorsApp.dart';
 
 class ProductInfCard extends StatelessWidget{
 
@@ -146,7 +146,7 @@ class ProductInfCard extends StatelessWidget{
                   topLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30),
                 ),
-                color: primaryColor,
+                color: AppColor.primaryColor,
               ),
               child: Icon(
                 Icons.add,

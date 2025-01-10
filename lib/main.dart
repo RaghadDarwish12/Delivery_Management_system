@@ -4,6 +4,7 @@ import 'package:flutter_project/view/Landing_Pages/First_Landing_View.dart';
 import 'package:flutter_project/view/Landing_Pages/Second_Landing_View.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_project/view/Landing_Pages/Landing_Pages_View.dart';
+import 'package:flutter_project/view/Splash_Page/Splash_Page_View.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: HomePageView(),
-      title: 'Coffe Shop',
+      home: SplashPageView(),
+      title: 'Shop',
 
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_project/Colors/ColorsApp.dart';
+import 'package:flutter_project/constant/Colors/ColorsApp.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProductDetailsViewPage extends StatelessWidget {

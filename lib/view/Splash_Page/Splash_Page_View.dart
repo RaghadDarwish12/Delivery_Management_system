@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/Colors/ColorsApp.dart';
+import 'package:flutter_project/constant/Colors/ColorsApp.dart';
 import 'package:flutter_project/view/Login_Page/Login_Page_View.dart';
 import 'package:get/get.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -17,32 +17,53 @@ class _SplashPageViewState extends State<SplashPageView> {
   @override
   Widget build(BuildContext context) {
 
-    return AnimatedSplashScreen(
-        splash: Column(
-          children: [
-            Expanded(
-              child: Image.asset(
-                "Assets/images/splash.png",
-                width: 200,
-                height: 200,), ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-              'Talabat',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.white,
-              ),
-            )
+    return Container(
+
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+
+          colors: [
+            Colors.white,
+            AppColor.primaryColor,
+            Colors.black87
           ],
+
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
-        splashIconSize: 200,
-        splashTransition: SplashTransition.scaleTransition,
-        backgroundColor: primaryColor,
-        duration: 3000,
-        pageTransitionType: PageTransitionType.bottomToTop,
-        nextScreen: LoginPageView()
+      ),
+      child: AnimatedSplashScreen(
+          splash: Column(
+            children: [
+              Expanded(
+                child: Image.asset(
+
+                  "Assets/images/splash.png",
+                  width: 200,
+                  height: 200,),
+              ),
+
+              const SizedBox(
+                height: 25,
+              ),
+
+              const Text(
+                'Talabat',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              )
+            ],
+          ),
+          splashIconSize: 200,
+          splashTransition: SplashTransition.scaleTransition,
+          backgroundColor: Colors.transparent,
+          duration: 3000,
+          pageTransitionType: PageTransitionType.bottomToTop,
+          nextScreen: LoginPageView()
+      ),
     );
   }
 /*
